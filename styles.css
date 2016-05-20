@@ -1,0 +1,20 @@
+/* Recomendations: 
+	* The colors of the social media icons, don't fit with the colors of the page. So, I think 
+	that changing the colors of them, it will look better. 
+	* The same problem with social media icons in the footer.
+	* Personally, I don't like the organization of the items in the header when the size of the
+	viewport changes.
+	* With another design, we could move the social media section and the lenguages box, to the nav 
+	section. With this, we could remove the black section and just let the banner section and the
+	nav section.
+	* I think that the <<get in touch>> and <<contact us>> setions should be in another social 
+	icon. Like an email icon, for example. 
+	* I like the page, but at the same time, I think that the design, it's very simple. We can 
+	do something about it. 
+ */
+.woocommerce__product-info.btn{
+	background-color: purple;
+}
+.text-info{
+	color: #43b9cb;
+}
