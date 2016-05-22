@@ -28,7 +28,10 @@ function bones_ahoy() {
   add_editor_style();
 
   // let's get language support going, if you need it
-  load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
+  add_action('after_setup_theme', 'my_theme_setup');
+  function my_theme_setup(){
+    load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
+  }
 
   // Load the Team Profiles custom post type
   require_once( 'library/testimonials-post-type.php' );
@@ -197,7 +200,9 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 //    'post_status' => 'publish',
 // ) );
 
-/*  gform_disply_weeks is a function that catches data from a form and using this information,
+/*  
+
+    gform_disply_weeks is a function that catches data from a form and using this information,
     gives you an approximation about how many weeks and days the woman has been pregnant.
 
     Depending on the lenguage, the function will give you the answer in that lenguage, like spanish, frenh, english, etc.
@@ -207,7 +212,7 @@ add_action( 'customize_register', 'bones_theme_customizer' );
     receiving a new different value everytime.
 
 */
-    
+
 add_filter('gform_register_init_scripts', 'gform_display_weeks', 10, 2);
 function gform_display_weeks($form) {
 
