@@ -197,7 +197,17 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 //    'post_status' => 'publish',
 // ) );
 
+/*  gform_disply_weeks is a function that catches data from a form and using this information,
+    gives you an approximation about how many weeks and days the woman has been pregnant.
 
+    Depending on the lenguage, the function will give you the answer in that lenguage, like spanish, frenh, english, etc.
+
+    gform_display_weeks is before add_filter because this function helps the other one by changing
+    the information every time the data changes. So gform_display_weeks cand make the calculus 
+    receiving a new different value everytime.
+
+*/
+    
 add_filter('gform_register_init_scripts', 'gform_display_weeks', 10, 2);
 function gform_display_weeks($form) {
 
